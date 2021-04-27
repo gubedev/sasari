@@ -4,7 +4,6 @@ import Link from 'next/link'
 import facebook from "../../assets/media/img/icons/facebook.jpg"
 import instagram from "../../assets/media/img/icons/instagram.jpg"
 
-
 const Footer = () => {
   return (
     <>

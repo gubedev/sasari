@@ -21,7 +21,7 @@ export default function Home() {
               src={slideOne} alt="Third slide" 
             />
           </Carousel.Item>
-          <Carousel.Item>
+          {/* <Carousel.Item>
             <img
               className="d-block w-100"
               src={"http://placehold.it/800x400?text=800x400"}
@@ -34,7 +34,7 @@ export default function Home() {
               src="http://placehold.it/800x400?text=800x400"
               alt="Third slide"
             />
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
         <div className="container-fluid pb-8 pt-4 page-content">
           <div className="row">
