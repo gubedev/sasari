@@ -16,6 +16,13 @@ const Breadcrumb = ( {section, category} ) => {
           </li>
         ) }
       </ol>
+      <style jsx>{`
+        visibility: hidden;
+        @media screen and (min-width: 1124px) {
+          visibility: visible;
+        }
+      `}
+      </style>
     </>
   )
 }

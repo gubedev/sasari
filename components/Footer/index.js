@@ -1,6 +1,9 @@
 import React from "react"
 import { colors } from "styles/theme"
 import Link from 'next/link'
+import facebook from "../../assets/media/img/icons/facebook.jpg"
+import instagram from "../../assets/media/img/icons/instagram.jpg"
+
 
 const Footer = () => {
   return (
@@ -12,17 +15,17 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li className="font-weight-bold pb-2">TIENDA ONLINE</li>
                 <li>
-                  <Link href="/">
+                  <Link href="/cambios-y-devoluciones">
                     <a>Cambios y devoluciones</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/informacion-de-envios">
                     <a>Información de envíos</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/medios-de-pago">
                     <a>Medios de pago</a>
                   </Link>
                 </li>
@@ -61,6 +64,18 @@ const Footer = () => {
                     <a>Contacto</a>
                   </Link>
                 </li>
+                <li className="pt-1">
+                  <div className="d-flex">
+                    <img 
+                      src={facebook}
+                      className="mr-2 i-42"
+                    />
+                    <img 
+                      src={instagram}
+                      className="i-42"
+                    />
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -89,6 +104,10 @@ const Footer = () => {
           .col-md-4 {
             padding: 0;
           }
+        }
+        .i-42 {
+          width: 42px;
+          height: 42px;
         }
       `}</style>
     </>
