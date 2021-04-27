@@ -52,12 +52,12 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li className="font-weight-bold pb-2">INSTITUCIONAL</li>
                 <li>
-                  <Link href="/">
+                  <Link href="/quienes-somos">
                     <a>Quienes somos</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/contacto">
                     <a>Contacto</a>
                   </Link>
                 </li>
@@ -71,12 +71,24 @@ const Footer = () => {
           background-color: ${colors.primary};
           padding-top: 4em;
           padding-bottom: 8em;
+          text-align: center;
+        }
+        .col-md-4 {
+          padding: 1em;
         }
         li, a {
           color: #000000;
           weight: 700;
           font-size: 24px;
           line-height: 32px;
+        }
+        @media screen and (min-width: 1124px) {
+          footer {
+            text-align: left;
+          }
+          .col-md-4 {
+            padding: 0;
+          }
         }
       `}</style>
     </>

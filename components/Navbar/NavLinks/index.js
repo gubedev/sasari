@@ -13,21 +13,21 @@ const NavLinks = () => {
           <NavDropdown title="ACCESORIOS">
             <NavDropdown.Item>
               <Link
-                href={{ pathname: "/accesorios", query: { keyword: "accesorios" } }}
+                href={{ pathname: "/accesorios", query: { keyword: "maquillajes" } }}
               >
                 <span className="nav-link">MAQUILLAJE</span>
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
               <Link 
-                href={{ pathname: "/accesorios", query: { keyword: "accesorios" } }}
+                href={{ pathname: "/accesorios", query: { keyword: "llaveros" } }}
               >
                 <span className="nav-link">LLAVEROS</span>
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
               <Link 
-                href={{ pathname: "/accesorios", query: { keyword: "accesorios" } }}
+                href={{ pathname: "/accesorios", query: { keyword: "cinturones" } }}
               >
                 <span className="nav-link">CINTURONES</span>
               </Link>

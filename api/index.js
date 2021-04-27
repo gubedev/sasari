@@ -83,7 +83,7 @@ const products = [
     id: "11",
     category: "carteras",
     description: "Cartera Falcon negra",
-    isOff: false,
+    isOff: true,
     discountPercentage: 30,
     price: 1925,
   },
@@ -91,7 +91,7 @@ const products = [
     id: "12",
     category: "carteras",
     description: "Cartera Falcon mostaza",
-    isOff: false,
+    isOff: true,
     discountPercentage: 30,
     price: 2090,
   },
@@ -99,7 +99,7 @@ const products = [
     id: "13",
     category: "carteras",
     description: "Cartera Falcon camel",
-    isOff: false,
+    isOff: true,
     discountPercentage: 30,
     price: 2090,
   },
@@ -245,8 +245,19 @@ export const fetchProducts = async (category) => {
   })
 }
 
-export const fetchProduct = async (itemId) => {
-  const filtered = products.find((p) => p.id === itemId)
+export const fetchProduct = async (productId) => {
+  const filtered = products.find((p) => p.id === productId)
+
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      resolve(filtered)
+    }, 2000)
+  })
+}
+
+
+export const fetchProductsInOff = async () => {
+  const filtered = products.filter((p) => p.isOff)
 
   return new Promise(function (resolve, reject) {
     setTimeout(() => {

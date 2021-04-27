@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import Head from "next/head"
 import AppLayout from "components/AppLayout"
 import { Carousel } from "react-bootstrap"
@@ -6,15 +5,8 @@ import slideOne from "../assets/media/img/slides/02.jpg"
 import carterasCategory from "../assets/media/img/categories/carteras-category.jpg"
 import cinturonesCategory from "../assets/media/img/categories/cinturones-category.jpg"
 import neccessariesCategory from "../assets/media/img/categories/neccessaries-category.jpg"
-import { fetchProducts } from "../api"
 
 export default function Home() {
-  
-  useEffect(() => {
-    fetchProducts()
-      .then( response => console.log(response) )
-  }, [])
-  
   return (
     <>
       <Head>
@@ -24,7 +16,10 @@ export default function Home() {
       <AppLayout>
         <Carousel>
           <Carousel.Item>
-            <img className="d-block w-100" src={slideOne} alt="Third slide" />
+            <img 
+              className="d-block w-100" 
+              src={slideOne} alt="Third slide" 
+            />
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -41,7 +36,7 @@ export default function Home() {
             />
           </Carousel.Item>
         </Carousel>
-        <div className="container-fluid pb-8 pt-4">
+        <div className="container-fluid pb-8 pt-4 page-content">
           <div className="row">
             <div className="col-md-12 col-lg-4">
               <div className="caterory">
@@ -50,12 +45,10 @@ export default function Home() {
                   src={carterasCategory}
                   alt="carteras"
                 />
-                <p className="caterory__title">
-                CARTERAS
-                </p>
+                <p className="caterory__title">CARTERAS</p>
               </div>
             </div>
-    
+
             <div className="col-md-12 col-lg-4">
               <div className="caterory">
                 <img
@@ -63,12 +56,10 @@ export default function Home() {
                   src={neccessariesCategory}
                   alt="neccessaries"
                 />
-                <p className="caterory__title">
-                  NECCESSARIES
-                </p>
+                <p className="caterory__title">NECCESSARIES</p>
               </div>
             </div>
-          
+
             <div className="col-md-12 col-lg-4">
               <div className="caterory">
                 <img
@@ -76,9 +67,7 @@ export default function Home() {
                   src={cinturonesCategory}
                   alt="cinturones"
                 />
-                <p className="caterory__title">
-                  CINTURONES
-                </p>
+                <p className="caterory__title">CINTURONES</p>
               </div>
             </div>
           </div>
@@ -86,14 +75,9 @@ export default function Home() {
       </AppLayout>
       <style jsx>
         {`
-          .pb-8 {
-            padding-bottom: 0em;
-          }
-          
           .caterory {
             width: 100%;
           }
-
           .caterory__title {
             font-size: 26px;
             color: #929292;
@@ -101,17 +85,13 @@ export default function Home() {
             padding: 1em;
             font-weight: bold;
           }
-          
           @media screen and (min-width: 1124px) {
             .caterory {
               width: 432px;
               height: 457px;
             }
-
-            .pb-8 {
-              padding-bottom: 8em;
-            }
           }
+          
         `}
       </style>
     </>

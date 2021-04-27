@@ -30,7 +30,7 @@ export default function Marroqueria() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppLayout>
-        <div className="container min-vh-100">
+        <div className="container min-vh-100 pb-8 page-content">
           <Breadcrumb 
             section={"Marroquería"} 
             category={category} 

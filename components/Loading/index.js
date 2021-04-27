@@ -6,7 +6,7 @@ const Loading = () => {
       <div
         className="d-flex justify-content-center p-4"
       >
-        <strong>Cargando ...</strong>
+        <strong className="text-gray">CARGANDO ...</strong>
         <div
           className="spinner-border ml-4"
         >

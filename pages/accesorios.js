@@ -3,7 +3,7 @@ import Head from "next/head"
 import AppLayout from "components/AppLayout"
 import Breadcrumb from "components/Breadcrumb"
 import { useRouter } from "next/router"
-import { fetchProducts } from "../api"
+import { fetchProducts } from "api"
 import ProductList from "components/ProductList"
 import Loading from "components/Loading"
 
@@ -29,19 +29,17 @@ export default function Accesorios() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AppLayout>
-        <div className="container min-vh-100">
+        <div className="container min-vh-100 pb-8 page-content">
           <Breadcrumb 
             section={"Accesorios"}
             category={category}
           />
-
           {isLoading ? <Loading/> : 
             (products &&  
               <ProductList
                 products={products}
               />)
           }
-
         </div>
       </AppLayout>
     </>

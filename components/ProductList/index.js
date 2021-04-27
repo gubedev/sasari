@@ -1,7 +1,7 @@
 import React from "react"
 import Product from "components/Product"
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, isShowingOff }) => {
   return (
     <>
       <ul className="product-list list-unstyled d-flex flex-wrap p-0">
@@ -11,6 +11,7 @@ const ProductList = ({ products }) => {
                   >
                   <Product 
                     product={product}
+                    isShowingOff={isShowingOff}
                   />
                 </li>
         })}

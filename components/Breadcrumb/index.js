@@ -5,14 +5,16 @@ const Breadcrumb = ( {section, category} ) => {
     <>
       <ol className="breadcrumb p-4">
         <li className="breadcrumb-item">
-          <a href="javascript:void(0);">Home</a>
+          <a className="text-gray">Home</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="javascript:void(0);">{section}</a>
+          <a className="text-gray">{section}</a>
         </li>
-        <li className="breadcrumb-item">
-          <a href="javascript:void(0);">{category}</a>
-        </li>
+        {category && (
+          <li className="breadcrumb-item">
+            <a className="text-gray">{category}</a>
+          </li>
+        ) }
       </ol>
     </>
   )

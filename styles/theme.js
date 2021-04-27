@@ -15,6 +15,7 @@ export const colors = {
 
 export const layout = {
   navbarMiddleHeight: '220px',
+  navbarMobileHeight: '90px',
   stickyWrapperHeight: '72px',
   newsletterHeight: '144px',
   footerHeight: '350px',

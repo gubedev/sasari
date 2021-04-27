@@ -1,6 +1,5 @@
 import css from "styled-jsx/css"
-
-import { fonts } from "styles/theme"
+import { fonts, layout } from "styles/theme"
 
 export const globalStyles = css.global`
   html,
@@ -79,4 +78,34 @@ export const globalStyles = css.global`
     color:  #929292;
     text-decoration: none;
   }
+
+  .carousel {
+    margin-top: ${layout.navbarMobileHeight};
+  }
+
+  .page-content {
+    margin-top: ${layout.navbarMobileHeight};
+  }
+
+  .pb-8 {
+    padding-bottom: 0em;
+  }
+
+  @media screen and (min-width: 1124px) {
+    .carousel {
+      margin-top: 0;
+    }
+
+    .pb-8 {
+      padding-bottom: 8em;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .page-content {
+      margin-top: 0;
+    }
+  }
+
+
 `
